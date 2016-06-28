@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0D621AA-3B84-4D97-B0FE-7E21F0F9CA47}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cine.Service</RootNamespace>
+    <AssemblyName>Cine.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>H:\5TO CICLO\NHibernate\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate">
+      <HintPath>H:\5TO CICLO\NHibernate\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\colaborador.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Combo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Cartelera.hbm.xml" />
+    <Content Include="Mapping\compra.hbm.xml" />
+    <Content Include="Mapping\espectador.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Genero.hbm.xml" />
+    <EmbeddedResource Include="Mapping\pelicula.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Estreno.hbm.xml" />
+    <Content Include="Transacciones.svc" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ColaUser.cs" />
+    <Compile Include="Data\Usuario.cs" />
+    <Compile Include="Dominio\Cargo.cs" />
+    <Compile Include="Dominio\Cartelera.cs" />
+    <Compile Include="Dominio\Colaborador.cs" />
+    <Compile Include="Dominio\Combo.cs" />
+    <Compile Include="Dominio\ComboProducto.cs" />
+    <Compile Include="Dominio\Compra.cs" />
+    <Compile Include="Dominio\CompraCombo.cs" />
+    <Compile Include="Dominio\CompraEntrada.cs" />
+    <Compile Include="Dominio\DataContrat.cs" />
+    <Compile Include="Dominio\Espectador.cs" />
+    <Compile Include="Dominio\Estrenos.cs" />
+    <Compile Include="Dominio\Funcion.cs" />
+    <Compile Include="Dominio\Genero.cs" />
+    <Compile Include="Dominio\Local.cs" />
+    <Compile Include="Dominio\Pelicula.cs" />
+    <Compile Include="Dominio\Producto.cs" />
+    <Compile Include="Dominio\Sala.cs" />
+    <Compile Include="Dominio\TipoCompraProducto.cs" />
+    <Compile Include="Dominio\TipoCompraxProducto.cs" />
+    <Compile Include="Dominio\TipoEntrada.cs" />
+    <Compile Include="Dominio\TipoEspectador.cs" />
+    <Compile Include="ITransacciones.cs" />
+    <Compile Include="Persistencia\CargoDAO.cs" />
+    <Compile Include="Persistencia\CarteleraDAO.cs" />
+    <Compile Include="Persistencia\CineDAO.cs" />
+    <Compile Include="Persistencia\ColaboradorDAO.cs" />
+    <Compile Include="Persistencia\ComboDAO.cs" />
+    <Compile Include="Persistencia\CompraDAO.cs" />
+    <Compile Include="Persistencia\ConexionUtil.cs" />
+    <Compile Include="Persistencia\EspectadorDAO.cs" />
+    <Compile Include="Persistencia\EstrenosDAO.cs" />
+    <Compile Include="Persistencia\GeneroDAO.cs" />
+    <Compile Include="Persistencia\LocalDAO.cs" />
+    <Compile Include="Persistencia\NHibernateHelper.cs" />
+    <Compile Include="Persistencia\PeliculaDAO.cs" />
+    <Compile Include="Persistencia\ProductoDAO.cs" />
+    <Compile Include="Persistencia\SalaDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transacciones.svc.cs">
+      <DependentUpon>Transacciones.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Cargo.hbm.xml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50769/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

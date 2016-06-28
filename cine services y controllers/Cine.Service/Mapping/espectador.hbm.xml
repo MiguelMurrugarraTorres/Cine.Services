@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Cine.Service"
+                   namespace="Cine.Service.Dominio"
+                   default-lazy="false">
+  <class name="Espectador" table="tbEspectador">
+    <id name="idEspectador" access="property" column="idEspectador">
+      <generator class="native" />
+    </id>
+
+
+    <property name="contraseña" column="contraseña" />
+    <property name="nombres" column="nombres" />
+    <property name ="apellidoPaterno" column ="apellidoPaterno"/>
+    <property name="apellidoMaterno" column="apellidoMaterno" />
+    <property name ="sexo" column ="sexo"/>
+    <property name="direccion" column="direccion" />
+    <property name ="fechaNacimiento" column ="fechaNacimiento"/>
+    <property name="telefono" column="telefono" />
+    <property name ="celular" column ="celular"/>
+    <property name="email" column="email" />
+    
+    <many-to-one name="TipoEspectador" column="idTipoEspectador"/>
+    
+
+  </class>
+</hibernate-mapping>

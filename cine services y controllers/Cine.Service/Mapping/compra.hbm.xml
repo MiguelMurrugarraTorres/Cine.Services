@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Cine.Service"
+                   namespace="Cine.Service.Dominio"
+                   default-lazy="false">
+  <class name="Compra" table="tb_Compra">
+    <id name="idCompra" access="property" column="idCompra">
+      <generator class="native" />
+    </id>
+    
+    
+    <property name="fecha" column="fecha" />
+    <property name="montoTotal" column="montoTotal" />
+    
+    <many-to-one name="Entradas" column="idCompraEntrada" />
+    <many-to-one name="CompraPro" column="idCompraPro" />
+    <many-to-one name="Funcion" column="idFuncion" />
+    <many-to-one name="Espectador" columb ="idEspectador"/>
+
+  </class>
+</hibernate-mapping>

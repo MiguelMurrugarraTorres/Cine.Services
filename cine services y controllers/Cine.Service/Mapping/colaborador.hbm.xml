@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Cine.Service"
+                   namespace="Cine.Service.Dominio"
+                   default-lazy="false">
+  <class name="Colaborador" table="tbColaborador">
+    <id name="idColaborador" access="property" column="idColaborador">
+      <generator class="native" />
+    </id>
+
+    <property name ="dni" column ="dni"/>
+    <property name="nombres" column="nombres" />
+    <property name="apellidoPaterno" column ="apellidoPaterno"/>
+    <property name="apellidoMaterno" column="apellidoMaterno" />
+    <property name="password" column="password" />
+    <property name ="sexo" column ="sexo"/>
+    <property name="direccion" column="direccion" />
+    <property name ="fechaNacimiento" column ="fechaNacimiento"/>
+    <property name="telefono" column="telefono" />
+    <many-to-one name ="Cargo" column ="idCargo"/>
+
+  </class>
+</hibernate-mapping>

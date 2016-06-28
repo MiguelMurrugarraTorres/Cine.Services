@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Cine.Service"
+                   namespace="Cine.Service.Dominio"
+                   default-lazy="false">
+  <class name="Estrenos" table="tbEstrenos">
+    <id name="idPelicula" access="property" column="idPelicula">
+      <generator class="native" />
+    </id>
+    <property name="titulo" column="titulo" />
+    <property name ="sinopsis" column ="sinopsis"/>
+    <property name="duracion" column="duracion" />
+    <property name ="director" column ="director"/>
+    <property name="actores" column="actores" />
+    <property name ="sitioWeb" column ="sitioWeb"/>
+    <property name="fechaEstreno" column="fechaEstreno" />
+    <property name="estado" column="estado" />
+    <many-to-one name="Genero" column="idGenero" />
+    <property name="imagen" column="imagen" />
+
+
+
+  </class>
+</hibernate-mapping>

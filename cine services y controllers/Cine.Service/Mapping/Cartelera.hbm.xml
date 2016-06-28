@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Cine.Service"
+                   namespace="Cine.Service.Dominio"
+                   default-lazy="false">
+  <class name="Cartelera" table="tbCartelera">
+    <id name="idCartelera" access="property" column="idCartelera">
+      <generator class="native" />
+    </id>
+    <property name="fechainicio" column="fechaInicio" />
+    <property name ="fechafin" column ="fechaFin"/>
+    <many-to-one name="pelicula" column="idPelicula" />
+  </class>
+</hibernate-mapping>
