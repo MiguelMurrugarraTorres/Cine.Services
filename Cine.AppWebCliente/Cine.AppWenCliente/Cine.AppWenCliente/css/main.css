@@ -1,0 +1,41 @@
+﻿ .fondo {
+ background: #445175;
+ }
+
+img{
+   width:100px;
+}
+.quitarfloat{
+    float:none
+}
+
+.espacioarriba{
+    margin-top:100px;
+   
+}
+
+.grande{
+    font-size:3em;
+
+}
+.no-lista li{
+    list-style-type:none;
+    
+}
+.no-lista{
+margin : 0px;
+padding:0px;
+}
+.padding-largo{
+ padding:5px 10px;
+}
+.se-gris{
+    background-color:#eee;
+    
+}
+
+.inline-block{
+    float:none;
+    display:inline-block;
+    margin-right:-4px;
+}

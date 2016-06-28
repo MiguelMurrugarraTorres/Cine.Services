@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a86c197d-701d-45c0-9efc-42a97de37d1c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50769/Transacciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Transacciones.xsd" MetadataType="Schema" ID="3d21806c-be4c-44ca-af97-2824743b51ff" SourceId="1" SourceUrl="http://localhost:50769/Transacciones.svc?xsd=xsd0" />
+    <MetadataFile FileName="Transacciones.disco" MetadataType="Disco" ID="c6254bfc-6b2b-495d-b58e-fc6f3664cc94" SourceId="1" SourceUrl="http://localhost:50769/Transacciones.svc?disco" />
+    <MetadataFile FileName="Transacciones1.xsd" MetadataType="Schema" ID="5681cde1-b967-460f-a9ef-f9f653e09203" SourceId="1" SourceUrl="http://localhost:50769/Transacciones.svc?xsd=xsd2" />
+    <MetadataFile FileName="Transacciones.wsdl" MetadataType="Wsdl" ID="7ba993cd-69cc-4172-8457-e092901c3a5c" SourceId="1" SourceUrl="http://localhost:50769/Transacciones.svc?wsdl" />
+    <MetadataFile FileName="Transacciones2.xsd" MetadataType="Schema" ID="f0d74a1f-2e5b-4414-a19a-907703bd7c6b" SourceId="1" SourceUrl="http://localhost:50769/Transacciones.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

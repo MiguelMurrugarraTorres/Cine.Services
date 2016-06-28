@@ -1,0 +1,6 @@
+C:\Cine.Services\Cine.AppWebCliente\Cine.AppWenCliente\Cine.AppWenCliente\bin\Cine.AppWenCliente.dll.config
+C:\Cine.Services\Cine.AppWebCliente\Cine.AppWenCliente\Cine.AppWenCliente\bin\Cine.AppWenCliente.dll
+C:\Cine.Services\Cine.AppWebCliente\Cine.AppWenCliente\Cine.AppWenCliente\bin\Cine.AppWenCliente.pdb
+C:\Cine.Services\Cine.AppWebCliente\Cine.AppWenCliente\Cine.AppWenCliente\obj\Debug\Cine.AppWenCliente.dll
+C:\Cine.Services\Cine.AppWebCliente\Cine.AppWenCliente\Cine.AppWenCliente\obj\Debug\Cine.AppWenCliente.pdb
+C:\Cine.Services\Cine.AppWebCliente\Cine.AppWenCliente\Cine.AppWenCliente\obj\Debug\Cine.AppWenCliente.csprojResolveAssemblyReference.cache
