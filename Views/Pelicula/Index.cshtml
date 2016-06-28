@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Cine.AppWeb.CineWS.Pelicula>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/tablas.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Crear")
+    </p>
+    <div class="datagrid">
+        <table>
+            <thead><tr>
+    <th>
+        ACTORES
+    </th>
+    
+    <th>
+        DURACION
+    </th>
+    <th>
+        PAIS
+    </th>
+    <th>
+        FECHA ESTRENO
+    </th>
+
+    <th>
+        IMAGEN
+    </th>
+    <th>
+        SINOPSIS
+    </th>
+
+    <th>
+       TITULO
+    </th>
+    
+     <th>
+           GENERO
+     </th>
+
+    <th></th>
+</tr></thead>
+            
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.actores)
+                        </td>
+                       
+                        <td>
+                            @Html.DisplayFor(modelItem => item.duracion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.estado)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fechaEstreno)
+                        </td>
+
+                        <td>
+                            <img src="~/Resource/@Html.DisplayFor(modelItem => item.imagen)" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.sinopsis)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.titulo)
+                        </td>
+                        <td>
+                          @Html.DisplayFor(modelItem => item.Genero.nombre)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Actualizar", new { id=item.idPelicula}) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+           
+
+        </table>
+    </div>
+    
+</body>
+</html>

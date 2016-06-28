@@ -1,0 +1,118 @@
+﻿@model Cine.AppWeb.CineWS.Estrenos
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Crear</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Estrenos</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.actores, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.actores)
+                    @Html.ValidationMessageFor(model => model.actores)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.director, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.director)
+                    @Html.ValidationMessageFor(model => model.director)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.duracion, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.duracion)
+                    @Html.ValidationMessageFor(model => model.duracion)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.estado, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.estado)
+                    @Html.ValidationMessageFor(model => model.estado)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.fechaEstreno, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.fechaEstreno)
+                    @Html.ValidationMessageFor(model => model.fechaEstreno)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Genero", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("idgenero", null, "--seleccionar--", new { htmlAtributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.imagen, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.imagen)
+                    @Html.ValidationMessageFor(model => model.imagen)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.sinopsis, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.sinopsis)
+                    @Html.ValidationMessageFor(model => model.sinopsis)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.sitioWeb, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.sitioWeb)
+                    @Html.ValidationMessageFor(model => model.sitioWeb)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.titulo, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.titulo)
+                    @Html.ValidationMessageFor(model => model.titulo)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
+
+
