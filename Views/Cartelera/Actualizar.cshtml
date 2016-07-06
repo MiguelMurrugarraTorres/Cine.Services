@@ -1,0 +1,64 @@
+﻿@model Cine.AppWeb.CineWS.Cartelera
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Actualizar</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>Cartelera</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.LabelFor(model => model.fechafin, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.fechafin)
+                    @Html.ValidationMessageFor(model => model.fechafin)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("PELICULA", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("Idpelicula", null, "--seleccionar--", new { htmlAtributes = new { @class = "form-control" } })
+                </div>
+            </div><div class="form-group">
+                @Html.LabelFor(model => model.fechainicio, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.fechainicio)
+                    @Html.ValidationMessageFor(model => model.fechainicio)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.idCartelera, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.idCartelera)
+                    @Html.ValidationMessageFor(model => model.idCartelera)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
