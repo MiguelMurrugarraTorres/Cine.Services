@@ -16,7 +16,7 @@ namespace Cine.AppWenCliente
         {
            if (!IsPostBack)
             {
-               
+                DropDownList1.DataBind();
             }
             
         }
@@ -35,7 +35,7 @@ namespace Cine.AppWenCliente
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-           
+            
             
            
           
