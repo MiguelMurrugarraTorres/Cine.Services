@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Cine.AppWenCliente.CineWS.Cartelera>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Home.cshtml";
+}
+
+<h2>Cartelera</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>Titulo</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pelicula.titulo)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Genero</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pelicula.Genero.nombre)
+            </td>
+        </tr>
+        <tr>
+            <td>Imagen</td>
+            <td>
+                <img src="~/Resource/@Html.DisplayFor(modelItem => item.pelicula.imagen)" />
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha FIN</td>
+            <td>@Html.DisplayFor(modelItem => item.fechafin)</td>
+        </tr>
+        <tr>
+            <td>HOY</td>
+            <td><p>@DateTime.Now.Date - Veala Hoy</p></td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+
+</table>
