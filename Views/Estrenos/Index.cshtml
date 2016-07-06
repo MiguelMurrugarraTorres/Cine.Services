@@ -22,28 +22,26 @@
             <thead>
                 <tr>
                     <th>
-                        ACTORES
+                        TITULO
                     </th>
 
                     <th>
                         DURACION
                     </th>
-                    <th>
-                        PAIS
-                    </th>
+                    
                     <th>
                         FECHA ESTRENO
                     </th>
 
                     <th>
-                        IMAGEN
+                        PAIS
                     </th>
                     <th>
-                        SINOPSIS
+                        IMAGEN
                     </th>
 
                     <th>
-                        TITULO
+                        SINOPSIS
                     </th>
 
                     <th>
@@ -59,18 +57,20 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.actores)
+                            @Html.DisplayFor(modelItem => item.titulo)
                         </td>
 
                         <td>
                             @Html.DisplayFor(modelItem => item.duracion)
                         </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.estado)
-                        </td>
+
                         <td>
                             @Html.DisplayFor(modelItem => item.fechaEstreno)
                         </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.estado)
+                        </td>
+                        
 
                         <td>
                             <img src="~/Resource/@Html.DisplayFor(modelItem => item.imagen)" />
@@ -79,9 +79,7 @@
                             @Html.DisplayFor(modelItem => item.sinopsis)
                         </td>
 
-                        <td>
-                            @Html.DisplayFor(modelItem => item.titulo)
-                        </td>
+                       
                         <td>
                             @Html.DisplayFor(modelItem => item.Genero.nombre)
                         </td>

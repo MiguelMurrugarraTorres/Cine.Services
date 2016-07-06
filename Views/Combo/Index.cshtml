@@ -8,6 +8,8 @@
 
 <html>
 <head>
+
+    <link href="~/Content/tablas.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
@@ -16,51 +18,60 @@
     <p>
         @Html.ActionLink("Create New", "Crear")
     </p>
-    <table class="tablaDatos">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.idCombo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.precioVenta)
-            </th>
-            <th>
-                Imagen
-            </th>
-            <th></th>
-        </tr>
+    <div class="datagrid">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.descripcion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.idCombo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.precioVenta)
+                    </th>
+                    <th>
+                        Imagen
+                    </th>
+                    <th></th>
+                </tr>
+
+            </thead>
+           <tbody>
+               @foreach (var item in Model)
+               {
+                   <tr>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.descripcion)
+                       </td>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.idCombo)
+                       </td>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.nombre)
+                       </td>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.precioVenta)
+                       </td>
+                       <td>
+                           <img src="~/Resource/@Html.DisplayFor(modelItem => item.imagen)" />
+                       </td>
+                       <td>
+                           @Html.ActionLink("Edit", "Actualizar", new { id = item.idCombo }) |
+                           @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                           @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                       </td>
+                   </tr>
+               }
+           </tbody>
+           
+
+        </table>
+    </div>
     
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idCombo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.precioVenta)
-            </td>
-            <td>
-                <img src="~/Resource/@Html.DisplayFor(modelItem => item.imagen)" />
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Actualizar", new { id = item.idCombo }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-    }
-    
-    </table>
 </body>
 </html>

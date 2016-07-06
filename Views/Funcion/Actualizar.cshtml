@@ -1,0 +1,69 @@
+﻿@model Cine.AppWeb.CineWS.Funcion
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Actualizar</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>Funcion</h4>
+            <hr />
+
+
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.LabelFor(model => model.idFuncion, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.idFuncion)
+                    @Html.ValidationMessageFor(model => model.idFuncion)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.horario, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.horario)
+                    @Html.ValidationMessageFor(model => model.horario)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Pelicula", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("idpelicula", null, "--seleccionar--", new { htmlAtributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Sala", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("idsala", null, "--seleccionar--", new { htmlAtributes = new { @class = "form-control" } })
+                </div>
+            </div>
+    
+            
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿@model Cine.AppWeb.CineWS.Colaborador
+
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/formularios.css" rel="stylesheet" />
+    <title>Iniciar</title>
+</head>
+<body>
+    <section id=" loginform">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <h4>Colaborador</h4>
+                <hr />
+                @Html.ValidationSummary(true)
+
+
+                <div class="jumbotron  loginbox ">
+
+                    <div>
+                        <label class="control-label">Nombre de Usuario</label>
+                    </div>
+
+                    <div>
+                        @Html.EditorFor(model => model.dni)
+                        @Html.ValidationMessageFor(model => model.dni)
+                    </div>
+
+
+
+
+                    <div>
+                        <label>Contraseña</label>
+                    </div>
+
+                    <div>
+                        @*@Html.EditorFor(model => model.password)*@
+                        @Html.PasswordFor(model => model.password)
+                        @*Html.ValidationMessageFor(model => model.password)*@
+
+                    </div>
+
+
+
+
+                    <div>
+                        <input type="submit" value="INGRESAR" class="btn btn-success" />
+                    </div>
+                   
+
+
+                </div>
+
+
+            </div>
+        }
+
+    </section>
+   
+    <div>
+        @Html.ActionLink("Back to List", "Iniciar")
+    </div>
+</body>
+</html>

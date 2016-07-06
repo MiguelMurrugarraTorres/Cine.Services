@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Cine.AppWeb.CineWS.TipoEntrada>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/tablas.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Crear")
+    </p>
+    <div class="datagrid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PrecioOferta)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.idTipoEntrada)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.precioFeriado)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.precioNormal)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PrecioOferta)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.idTipoEntrada)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.precioFeriado)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.precioNormal)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Actualizar", new { id=item.idTipoEntrada }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Eliminar", new {  id=item.idTipoEntrada})
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            
+
+        </table>
+    </div>
+   
+</body>
+</html>
