@@ -34,7 +34,7 @@ namespace Cine.AppWeb.Controllers
             if (estado == true)
             {
                 men = "Index";
-                controlador = "Home";
+                controlador = "ComprasEntrada.aspx";
                 
             }
             else
